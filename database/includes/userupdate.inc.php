@@ -9,14 +9,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     try{
         require_once "dbh.inc.php";     // include database connection
-        $query = "INSERT INTO users (username, pwd, email) VALUES (:username,:pwd,:email);";
+        $query = "UPDATE users 
+        SET username = :username,
+            pwd = :pwd,
+            email = :email
+        WHERE id = 1
+
+        
+        ;";
         // prepare statement for execution
         $stmt = $pdo-> prepare($query);
         $stmt ->bindParam(":username",$username);
         $stmt->bindParam(":email",$email);
         $stmt->bindParam(":pwd",$pwd);
         // $stmt->execute([$username,$password,$email]);   // bind values and execute 
-$stmt->execute();
+        $stmt->execute();
         //close the connection
         $pdo = null;
         $stmt = null;
