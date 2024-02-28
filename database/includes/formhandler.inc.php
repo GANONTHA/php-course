@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $stmt->bindParam(":email",$email);
         $stmt->bindParam(":pwd",$pwd);
         // $stmt->execute([$username,$password,$email]);   // bind values and execute 
-
+$stmt->execute();
         //close the connection
         $pdo = null;
         $stmt = null;
