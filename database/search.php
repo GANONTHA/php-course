@@ -42,7 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($result)) {
         echo '<p>' . 'No result found' . '</p>';
     } else {
-        var_dump($result);
+        foreach ($result as $row) {
+            echo "<p>" .  $row['username'] ."</p>" . "<br/>";
+            echo "<p>" .  $row['pwd'] ."</p>" . "<br/>";
+            echo "<p>" .  $row['email'] ."</p>" . "<br/>";
+        }
     }
     ?>
 </body>
