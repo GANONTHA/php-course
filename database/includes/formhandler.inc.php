@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //close the connection
         $pdo = null;
         $stmt = null;
-        header("Location: ../index.html");   // Redirecting to home page if the user is not trying to post a request 
+        header("Location: ../index.html");   // Redirecting to home page after closing the connection
         die();
     } catch (PDOException $err) {
         die("Error!: " . $err->getMessage());
