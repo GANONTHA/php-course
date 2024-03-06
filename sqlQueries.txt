@@ -1,0 +1,11 @@
+CREATE TABLE employees (
+
+    id INT(10) NOT NULL AUTO_INCREMENT,
+    firstName VARCHAR(30) NOT NULL,
+    lastName VARCHAR(30),
+    phone INT(20) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    job_position VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id)
+);
