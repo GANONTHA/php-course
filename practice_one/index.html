@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSiley</title>
+</head>
+<body>
+    <h1>Welcome to MSiley's Official website</h1>
+    <p>Add new employee</p>
+
+    <form action="includes/dbh.inc.php" method="post">
+        <label for="firstName">First Name: </label><br>
+        <input type="text"  id="firstName" name="firstName"><br>
+        <label for="lastName">Last Name: </label><br>
+        <input type="text"  id="lastName" name="lastName"><br>
+        <label for="phone">Phone: </label> <br>
+        <input type="number"  id="phone" name="phone"><br>
+        <label for="email">Email: </label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="city"  >City: </label><br>
+        <input type="text" id="city" name="city"><br>
+        <label for="jobTitle"  >Job Title: </label><br>
+        <select name="job" id="jobTitle">
+            <option value="Manager">Manager</option>
+            <option value="developer" >Software Developer</option>
+            <option value="designer">Designer</option>
+            <option value="analyst">Data Analyst</option>
+            <option value="other">Other role</option>
+        </select> <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
