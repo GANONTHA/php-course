@@ -42,7 +42,7 @@ try {
     if (empty($result)) {
       echo "<p> The users' list is empty</p>";
     } else {
-      var_dump($result);
+      // var_dump($result);
       foreach ($result as $user) {
         var_dump($user);
       }
