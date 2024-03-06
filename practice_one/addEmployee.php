@@ -14,11 +14,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         require_once 'dbh.inc.php'; 
 
-        $query = '
-            INSERT INTO employees 
-            (firstName, lastName, phone, email, city, job_position) 
-            VALUES (:firstName, :lastName, :phone, :email, :city, :job_position )
-        ;';
+        $query = " INSERT INTO employees (firstName, lastName, phone, email, city, job_position) VALUES (:firstName, :lastName, :phone, :email, :city, :job_position )
+        ;";
 
     //PREPARE STATEMENT & BIND PARAMS
             $stm = $pdo->prepare($query);
