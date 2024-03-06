@@ -44,7 +44,11 @@ try {
     } else {
       // var_dump($result);
       foreach ($result as $user) {
-        var_dump($user);
+        echo  '<li>';
+        echo "ID : ". $user['id']." ";
+        echo "Username : ". $user['username']." ";
+        echo "Email : ". $user['email']. "<br/>";
+        echo  "</li>";
       }
     }
     ?>
