@@ -1,7 +1,7 @@
 <?php
 
 //CONNECT TO DATABASE WITH PDO
-$dsn = ("mysql:host=localhost; dbname = msiley_db");
+$dsn = "mysql:host=localhost; dbname = msiley_db";
 $dbusername = 'root';
 $dbpassword = '';
 

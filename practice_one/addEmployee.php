@@ -11,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //QUERY THE DB FOR INSERTION
 
     try {
-
         require_once 'includess/dbh.inc.php';
 
         $query = " INSERT INTO employees (firstName, lastName, phone, email, city, job_position) VALUES (:firstName, :lastName, :phone, :email, :city, :job_position )
@@ -28,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //EXECUTE
         $stm->execute();
         //CLOSE CONNECTION & RETURN TO FORM 
-        $stm = null;
         $pdo = null;
+        $stm = null;
         header('Location:../index.html');
         die();
     } catch (PDOException $err) {
