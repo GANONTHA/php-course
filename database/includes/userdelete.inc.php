@@ -3,7 +3,7 @@
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST["username"];  // get the username from form data
+    $username = strtolower($_POST["username"]);  // get the username from form data
     $password = $_POST["password"];
 
 
