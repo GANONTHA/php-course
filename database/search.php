@@ -43,9 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p>' . 'No result found' . '</p>';
     } else {
         foreach ($result as $row) {
-            echo "<p>" .  $row['username'] ."</p>" . "<br/>";
-            echo "<p>" .  $row['pwd'] ."</p>" . "<br/>";
-            echo "<p>" .  $row['email'] ."</p>" . "<br/>";
+            echo "<p> Name: " .  $row['username'] . "</p>" . "<br/>";
+            echo "<p> Password: " .  $row['pwd'] . "</p>" . "<br/>";
+            echo "<p> Email: " .  $row['email'] . "</p>" . "<br/>";
         }
     }
     ?>
