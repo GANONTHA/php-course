@@ -37,7 +37,7 @@ try {
   </form>
   <h2>Lit of all Users</h2>
 
-  <ul>
+  <ol>
     <?php
     if (empty($result)) {
       echo "<p> The users' list is empty</p>";
@@ -45,14 +45,14 @@ try {
       // var_dump($result);
       foreach ($result as $user) {
         echo  '<li>';
-        echo "ID : ". $user['id']." ";
-        echo "Username : ". $user['username']." ";
+        echo "Number : ". $user['id']." ";
+        echo "Fullname : ". $user['username']." ";
         echo "Email : ". $user['email']. "<br/>";
         echo  "</li>";
       }
     }
     ?>
-  </ul>
+  </ol>
 </body>
 
 </html>
