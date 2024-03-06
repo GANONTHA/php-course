@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // $stmt->execute([$username,$password,$email]);   // bind values and execute 
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC); //set the values as associative arrays
         //close the connection
         $pdo = null;
         $stmt = null;

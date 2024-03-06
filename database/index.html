@@ -8,7 +8,7 @@
   <body>
     <h2>Change account</h2>
 
-    <form action="includes/userupdate.inc.php">
+    <form action="includes/userupdate.inc.php" method="post">
       <input type="text" name="username" placeholder="username" /> <br />
       <input type="password" name="pwd" placeholder="password" /> <br />
       <input type="text" name="email" placeholder="email" /> <br />
@@ -39,10 +39,18 @@
     </form>
 
     <h2>Delete Account</h2>
-    <form action="includes/userdelete.inc.php">
+    <form action="includes/userdelete.inc.php" method="post">
       <input type="text" name="username" placeholder="username" /><br />
       <input type="password" name="pwd" placeholder="password" /><br />
       <button>Delete</button><br />
+    </form>
+
+    <h2>Update Data info</h2>
+
+    <form action="includes/updateData.php" method="post">
+      <input type="text" name="username" placeholder="username" >
+      <input type="password" name="pwd" placeholder="password" >
+      <button>Go!</button>
     </form>
   </body>
 </html>
