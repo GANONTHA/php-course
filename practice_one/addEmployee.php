@@ -11,7 +11,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //QUERY THE DB FOR INSERTION
 
     try{
-        require_once 'includes/dbh.inc.php'; 
+        
+        require_once 'dbh.inc.php'; 
 
         $query = '
             INSERT INTO employees 
