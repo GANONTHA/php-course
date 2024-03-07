@@ -3,7 +3,7 @@
 try {
   require_once 'includes/dbh.inc.php';
   $query = '
-  SELECT id, username, email FROM users;
+  SELECT * FROM customers ;
 ;';
 
   $stm = $pdo->prepare($query);
@@ -43,11 +43,13 @@ try {
       echo "<p> The users' list is empty</p>";
     } else {
       // var_dump($result);
-      foreach ($result as $user) {
+      foreach ($result as $customer) {
         echo  '<li>';
-        echo "Number : ". $user['id']." ";
-        echo "Fullname : ". $user['username']." ";
-        echo "Email : ". $user['email']. "<br/>";
+        echo "Number : " . $customer['customerNumber'] . " ";
+        echo "Fullname : " . $customer['customerName'] . " ";
+        echo "City : " . $customer['city'] . "<br/>";
+        echo "Country : " . $customer['country'] . "<br/>";
+        echo "Phone : " . $customer['phone'] . "<br/>";
         echo  "</li>";
       }
     }

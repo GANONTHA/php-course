@@ -3,7 +3,7 @@
 
 //CONNECT TO DB
 
-$dsn = "mysql:host = localhost;dbname=html_db";
+$dsn = "mysql:host = localhost;dbname=startup";
 $dbusername = "root";
 $dbpassword = "";
 
