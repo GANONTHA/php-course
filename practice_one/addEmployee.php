@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //CLOSE CONNECTION & RETURN TO FORM 
         $pdo = null;
         $stm = null;
-        header('Location:../index.html');
+        header('Location: ../index.html');
         die();
     } catch (PDOException $err) {
         die('A fatal Error happened: ' . $err->getMessage());
